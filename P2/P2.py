@@ -45,7 +45,7 @@ n = 15
 k = 10
 p = 0.015
 
-for i in range(2^k):
+for i in range(2**k):
     for j in range(n): 
         codeword +=  str(randint(0,1))
 
