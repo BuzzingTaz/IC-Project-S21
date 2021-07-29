@@ -50,12 +50,31 @@ enc_string = ''
 for char in text:
     enc_string += huffman_code[ord(char)]
 
-enc_string_list = []
-for i in enc_string:
-    enc_string_list.append(int(i))
+with open("Encoded_output.txt", 'w') as file:
+    file.write(enc_string)
 
 print(f"size of text without encoding: {8*len(text)} bits")
 print(f"Size of text with fixed length code: {len(text)*ceil(log2(len(counts_arr)))} bits")
 print(f"Size of Huffman encoded string: {len(enc_string)} bits")
 
 
+## Decoding
+
+with open("Encoded_output.txt", "r") as file:
+    enc_output = file.read()
+    
+    
+curr = ''
+output_string = ''
+
+decode_dict = dict()
+decode_dict.update((code, char) for char,code in huffman_code.items())
+
+for i in enc_output:
+    curr += i
+    if curr in decode_dict:
+        output_string+=chr(decode_dict[curr])
+        curr = ''
+
+with open("Decoded_output", 'w') as file:
+    file.write(output_string)
