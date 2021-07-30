@@ -3,7 +3,7 @@ from TreeNode import TreeNode
 # Recursive function to find Huffman code given a tree
 def generate(Node, enc_string = ''):
 
-    if type(Node)==int:
+    if type(Node)==str:
         return{Node: enc_string}
     
     (left, right) = Node.children()
@@ -15,9 +15,10 @@ def generate(Node, enc_string = ''):
 
 
 def encode(text, huffman_code):
+
     enc_string = ''
     for char in text:
-        enc_string += huffman_code[ord(char)]
+        enc_string += huffman_code[char]
     
     return enc_string
 
@@ -33,7 +34,7 @@ def decode(text, huffman_code):
     for i in text:
         curr += i
         if curr in decode_dict:
-            output_string+=chr(decode_dict[curr])
+            output_string+=decode_dict[curr]
             curr = ''
     
     return output_string
@@ -53,3 +54,8 @@ def make_tree(counts_arr):
         counts_arr.append((node,freq))
     
     return counts_arr[0][0]
+
+def display(huffman_code):
+    print("\nList of Huffman Codes:")
+    for (char, code) in huffman_code.items():
+        print(f"\'{char}\' (ASCII = {ord(char)})\t--> {code}")

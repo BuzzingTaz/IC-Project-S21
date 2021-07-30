@@ -1,63 +1,80 @@
-from TreeNode import TreeNode
-import huffman
 from math import log2
 from math import ceil
+import utils
+import sys
+
+import huffman
 import json
 
 
-freq_arr = [0]*256
-with open("./Inputs/File_1.txt", "r") as file:
-    text = file.read()
-    for i in text:
-        freq_arr[ord(i)] += 1
+## Asking user input
 
-# counts_arr contains a list of (char, freq) integer pairs
-counts_arr = []
-print("Characters --> Frequencies")
-for char, count in enumerate(freq_arr):
-    if(count):
-        counts_arr.append((char,count))
-        print(f'\'{chr(char)}\' -->  {str(count)}')
-print()
+file_number = input("Enter file number to be encoded: ")
 
-# Using a copy of counts_arr to generate huffman tree and code
-huff_tree = huffman.make_tree(counts_arr.copy())
-huffman_code = huffman.generate(huff_tree)
-
-with open("Code.json", 'w') as f_json:
-    json.dump(huffman_code, f_json)
+operation = input("Enter operation E/D/B (Encode/Decode/Both): ")
 
 
-symbols = 0
-print("List of Huffman Codes:")
-for (char, count) in counts_arr:
-    print(f"\'{chr(char)}\' --> {huffman_code[char]}")
-    symbols += count*len(huffman_code[char])
+## Reading file and setup
 
-print(f"Average length of codeword = {symbols/len(text)}")
+file_location = "./Inputs/File_" + file_number + ".txt"
 
+text = open(file_location,"r").read()
 
-## Encoding
+# counts_arr contains a list of (char, freq) pairs
+counts_arr = utils.get_frequencies(text)
+utils.print_frequencies(counts_arr)
 
-enc_string = huffman.encode(text, huffman_code)
+if (operation[0].lower() == 'e'or operation[0].lower() == 'b'):
 
-with open("./Results/Encoded_output.txt", 'w') as file:
-    file.write(enc_string)
+    ## Generating Huffman code
 
+    # Using a copy of counts_arr to generate huffman tree and code
+    huff_tree = huffman.make_tree(counts_arr.copy())
+    huffman_code = huffman.generate(huff_tree)
 
-print(f"size of text without encoding: {8*len(text)} bits")
-print(f"Size of text with fixed length code: {len(text)*ceil(log2(len(counts_arr)))} bits")
-print(f"Size of Huffman encoded string: {len(enc_string)} bits")
+    # Saving huffman code to a json file for further use
+    json.dump(huffman_code, open(f"Code{file_number}.json", 'w'))
+    huffman.display(huffman_code)
 
+    symbols = 0
+    for (char, count) in counts_arr:
+        symbols += count*len(huffman_code[char])
 
-## Decoding
-
-with open("./Results/Encoded_output.txt", "r") as file:
-    enc_output = file.read()
-
-
-decoded_output = huffman.decode(enc_output, huffman_code)
+    print(f"Average length of Huffman encoded codeword: {symbols/len(text)}")
 
 
-with open("./Results/Decoded_output.txt", 'w') as file:
-    file.write(decoded_output)
+    ## Encoding
+
+    huffman_code = json.load(open(f"Code{file_number}.json", "r"))
+
+    enc_string = huffman.encode(text, huffman_code)
+
+    print(f"\nSize of text without encoding: {8*len(text)} bits")
+    print(f"\nSize of text with fixed length code: {len(text)*ceil(log2(len(counts_arr)))} bits")
+    print(f"\nSize of Huffman encoded string: {len(enc_string)} bits\n")
+
+    open(f"./Results/Encoded_output{file_number}.txt", 'w').write(enc_string)
+    print(f"The encoded sequence is in Results/Encoded_output{file_number}.txt")
+
+
+if(operation[0].lower() == 'd' or operation[0].lower() == 'b'):
+
+    ## Decoding
+    try:
+        huffman_code = json.load(open(f"Code{file_number}.json", "r"))
+
+        enc_output = open(f"./Results/Encoded_output{file_number}.txt", "r").read()
+    except FileNotFoundError:
+        print(f"No Encoded file was found.\nPlease run encoding for file {file_number} before decoding")
+        print("Nothing was decoded")
+        sys.exit()
+
+    decoded_output = huffman.decode(enc_output, huffman_code)
+
+    open(f"./Results/Decoded_output{file_number}.txt", 'w').write(decoded_output)
+    print(f"\nThe Decoded string is in Results/Decoded_output{file_number}.txt")
+
+try:
+    len(huffman_code)
+except NameError:
+    print("\nInvalid operation")
