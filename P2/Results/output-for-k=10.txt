@@ -1,0 +1,265 @@
+The number of trials N = 2000
+
+Tuple = (15,10,0.015)
+The probability of error in decoding is equal to 0.059
+The probability of error in decoding is equal to 0.051
+The probability of error in decoding is equal to 0.0615
+The probability of error in decoding is equal to 0.05
+The probability of error in decoding is equal to 0.0535
+The minimum probability of error in decoding (after five trials) for this tuple is 0.05.
+
+Tuple = (16,10,0.015)
+The probability of error in decoding is equal to 0.0425
+The probability of error in decoding is equal to 0.0475
+The probability of error in decoding is equal to 0.0415
+The probability of error in decoding is equal to 0.0405
+The probability of error in decoding is equal to 0.0375
+The minimum probability of error in decoding (after five trials) for this tuple is 0.0375.
+
+Tuple = (17,10,0.015)
+The probability of error in decoding is equal to 0.027
+The probability of error in decoding is equal to 0.024
+The probability of error in decoding is equal to 0.023
+The probability of error in decoding is equal to 0.026
+The probability of error in decoding is equal to 0.029
+The minimum probability of error in decoding (after five trials) for this tuple is 0.023.
+
+Tuple = (18,10,0.015)
+The probability of error in decoding is equal to 0.0145
+The probability of error in decoding is equal to 0.024
+The probability of error in decoding is equal to 0.0195
+The probability of error in decoding is equal to 0.0225
+The probability of error in decoding is equal to 0.015
+The minimum probability of error in decoding (after five trials) for this tuple is 0.0145.
+
+Tuple = (19,10,0.015)
+The probability of error in decoding is equal to 0.0155
+The probability of error in decoding is equal to 0.0095
+The probability of error in decoding is equal to 0.012
+The probability of error in decoding is equal to 0.0125
+The probability of error in decoding is equal to 0.011
+The minimum probability of error in decoding (after five trials) for this tuple is 0.0095.
+
+Tuple = (20,10,0.015)
+The probability of error in decoding is equal to 0.004
+The probability of error in decoding is equal to 0.008
+The probability of error in decoding is equal to 0.005
+The probability of error in decoding is equal to 0.009
+The probability of error in decoding is equal to 0.0085
+The minimum probability of error in decoding (after five trials) for this tuple is 0.004.
+
+Tuple = (21,10,0.015)
+The probability of error in decoding is equal to 0.002
+The probability of error in decoding is equal to 0.0075
+The probability of error in decoding is equal to 0.006
+The probability of error in decoding is equal to 0.008
+The probability of error in decoding is equal to 0.007
+The minimum probability of error in decoding (after five trials) for this tuple is 0.002.
+
+Tuple = (22,10,0.015)
+The probability of error in decoding is equal to 0.003
+The probability of error in decoding is equal to 0.003
+The probability of error in decoding is equal to 0.0035
+The probability of error in decoding is equal to 0.002
+The probability of error in decoding is equal to 0.0025
+The minimum probability of error in decoding (after five trials) for this tuple is 0.002.
+
+Tuple = (23,10,0.015)
+The probability of error in decoding is equal to 0.0015
+The probability of error in decoding is equal to 0.0005
+The probability of error in decoding is equal to 0.0005
+The probability of error in decoding is equal to 0.002
+The probability of error in decoding is equal to 0.0025
+The minimum probability of error in decoding (after five trials) for this tuple is 0.0005.
+
+Tuple = (24,10,0.015)
+The probability of error in decoding is equal to 0.0015
+The probability of error in decoding is equal to 0.001
+The probability of error in decoding is equal to 0.001
+The probability of error in decoding is equal to 0.001
+The probability of error in decoding is equal to 0.001
+The minimum probability of error in decoding (after five trials) for this tuple is 0.001.
+
+Tuple = (25,10,0.015)
+The probability of error in decoding is equal to 0.0005
+The probability of error in decoding is equal to 0.0
+The probability of error in decoding is equal to 0.0005
+The probability of error in decoding is equal to 0.001
+The probability of error in decoding is equal to 0.0
+The minimum probability of error in decoding (after five trials) for this tuple is 0.0.
+
+Tuple = (15,10,0.1)
+The probability of error in decoding is equal to 0.4975
+The probability of error in decoding is equal to 0.4625
+The probability of error in decoding is equal to 0.475
+The probability of error in decoding is equal to 0.493
+The probability of error in decoding is equal to 0.482
+The minimum probability of error in decoding (after five trials) for this tuple is 0.4625.
+
+Tuple = (16,10,0.1)
+The probability of error in decoding is equal to 0.4305
+The probability of error in decoding is equal to 0.434
+The probability of error in decoding is equal to 0.4265
+The probability of error in decoding is equal to 0.4285
+The probability of error in decoding is equal to 0.4085
+The minimum probability of error in decoding (after five trials) for this tuple is 0.4085.
+
+Tuple = (17,10,0.1)
+The probability of error in decoding is equal to 0.3885
+The probability of error in decoding is equal to 0.378
+The probability of error in decoding is equal to 0.372
+The probability of error in decoding is equal to 0.366
+The probability of error in decoding is equal to 0.368
+The minimum probability of error in decoding (after five trials) for this tuple is 0.366.
+
+Tuple = (18,10,0.1)
+The probability of error in decoding is equal to 0.346
+The probability of error in decoding is equal to 0.3415
+The probability of error in decoding is equal to 0.341
+The probability of error in decoding is equal to 0.354
+The probability of error in decoding is equal to 0.333
+The minimum probability of error in decoding (after five trials) for this tuple is 0.333.
+
+Tuple = (19,10,0.1)
+The probability of error in decoding is equal to 0.2935
+The probability of error in decoding is equal to 0.3045
+The probability of error in decoding is equal to 0.307
+The probability of error in decoding is equal to 0.2765
+The probability of error in decoding is equal to 0.29
+The minimum probability of error in decoding (after five trials) for this tuple is 0.2765.
+
+Tuple = (20,10,0.1)
+The probability of error in decoding is equal to 0.2685
+The probability of error in decoding is equal to 0.264
+The probability of error in decoding is equal to 0.264
+The probability of error in decoding is equal to 0.259
+The probability of error in decoding is equal to 0.2475
+The minimum probability of error in decoding (after five trials) for this tuple is 0.2475.
+
+Tuple = (21,10,0.1)
+The probability of error in decoding is equal to 0.2255
+The probability of error in decoding is equal to 0.2335
+The probability of error in decoding is equal to 0.213
+The probability of error in decoding is equal to 0.224
+The probability of error in decoding is equal to 0.234
+The minimum probability of error in decoding (after five trials) for this tuple is 0.213.
+
+Tuple = (22,10,0.1)
+The probability of error in decoding is equal to 0.186
+The probability of error in decoding is equal to 0.1815
+The probability of error in decoding is equal to 0.1815
+The probability of error in decoding is equal to 0.1745
+The probability of error in decoding is equal to 0.197
+The minimum probability of error in decoding (after five trials) for this tuple is 0.1745.
+
+Tuple = (23,10,0.1)
+The probability of error in decoding is equal to 0.177
+The probability of error in decoding is equal to 0.175
+The probability of error in decoding is equal to 0.166
+The probability of error in decoding is equal to 0.166
+The probability of error in decoding is equal to 0.152
+The minimum probability of error in decoding (after five trials) for this tuple is 0.152.
+
+Tuple = (24,10,0.1)
+The probability of error in decoding is equal to 0.1385
+The probability of error in decoding is equal to 0.1215
+The probability of error in decoding is equal to 0.13
+The probability of error in decoding is equal to 0.148
+The probability of error in decoding is equal to 0.1345
+The minimum probability of error in decoding (after five trials) for this tuple is 0.1215.
+
+Tuple = (25,10,0.1)
+The probability of error in decoding is equal to 0.127
+The probability of error in decoding is equal to 0.13
+The probability of error in decoding is equal to 0.117
+The probability of error in decoding is equal to 0.1195
+The probability of error in decoding is equal to 0.12
+The minimum probability of error in decoding (after five trials) for this tuple is 0.117.
+
+Tuple = (15,10,0.45)
+The probability of error in decoding is equal to 0.997
+The probability of error in decoding is equal to 0.9985
+The probability of error in decoding is equal to 1.0
+The probability of error in decoding is equal to 0.9985
+The probability of error in decoding is equal to 0.998
+The minimum probability of error in decoding (after five trials) for this tuple is 0.997.
+
+Tuple = (16,10,0.45)
+The probability of error in decoding is equal to 0.9975
+The probability of error in decoding is equal to 0.997
+The probability of error in decoding is equal to 0.996
+The probability of error in decoding is equal to 0.996
+The probability of error in decoding is equal to 0.9975
+The minimum probability of error in decoding (after five trials) for this tuple is 0.996.
+
+Tuple = (17,10,0.45)
+The probability of error in decoding is equal to 0.9975
+The probability of error in decoding is equal to 0.998
+The probability of error in decoding is equal to 0.998
+The probability of error in decoding is equal to 0.998
+The probability of error in decoding is equal to 0.998
+The minimum probability of error in decoding (after five trials) for this tuple is 0.9975.
+
+Tuple = (18,10,0.45)
+The probability of error in decoding is equal to 0.997
+The probability of error in decoding is equal to 0.9965
+The probability of error in decoding is equal to 0.9945
+The probability of error in decoding is equal to 0.9965
+The probability of error in decoding is equal to 0.9975
+The minimum probability of error in decoding (after five trials) for this tuple is 0.9945.
+
+Tuple = (19,10,0.45)
+The probability of error in decoding is equal to 0.9975
+The probability of error in decoding is equal to 0.9955
+The probability of error in decoding is equal to 0.998
+The probability of error in decoding is equal to 0.993
+The probability of error in decoding is equal to 0.9945
+The minimum probability of error in decoding (after five trials) for this tuple is 0.993.
+
+Tuple = (20,10,0.45)
+The probability of error in decoding is equal to 0.9955
+The probability of error in decoding is equal to 0.998
+The probability of error in decoding is equal to 0.9975
+The probability of error in decoding is equal to 0.9955
+The probability of error in decoding is equal to 0.996
+The minimum probability of error in decoding (after five trials) for this tuple is 0.9955.
+
+Tuple = (21,10,0.45)
+The probability of error in decoding is equal to 0.9955
+The probability of error in decoding is equal to 0.997
+The probability of error in decoding is equal to 0.9965
+The probability of error in decoding is equal to 0.995
+The probability of error in decoding is equal to 0.9965
+The minimum probability of error in decoding (after five trials) for this tuple is 0.995.
+
+Tuple = (22,10,0.45)
+The probability of error in decoding is equal to 0.9975
+The probability of error in decoding is equal to 0.995
+The probability of error in decoding is equal to 0.9985
+The probability of error in decoding is equal to 0.997
+The probability of error in decoding is equal to 0.998
+The minimum probability of error in decoding (after five trials) for this tuple is 0.995.
+
+Tuple = (23,10,0.45)
+The probability of error in decoding is equal to 0.9965
+The probability of error in decoding is equal to 0.994
+The probability of error in decoding is equal to 0.9965
+The probability of error in decoding is equal to 0.996
+The probability of error in decoding is equal to 0.9965
+The minimum probability of error in decoding (after five trials) for this tuple is 0.994.
+
+Tuple = (24,10,0.45)
+The probability of error in decoding is equal to 0.9925
+The probability of error in decoding is equal to 0.9925
+The probability of error in decoding is equal to 0.9975
+The probability of error in decoding is equal to 0.9945
+The probability of error in decoding is equal to 0.9965
+The minimum probability of error in decoding (after five trials) for this tuple is 0.9925.
+
+Tuple = (25,10,0.45)
+The probability of error in decoding is equal to 0.997
+The probability of error in decoding is equal to 0.9965
+The probability of error in decoding is equal to 0.997
+The probability of error in decoding is equal to 0.9945
+The probability of error in decoding is equal to 0.995
+The minimum probability of error in decoding (after five trials) for this tuple is 0.9945.
