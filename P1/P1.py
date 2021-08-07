@@ -22,30 +22,31 @@ text = open(file_location,"r").read()
 
 if (operation[0].lower() == 'e'or operation[0].lower() == 'b'):
 
+    gen_time = time.time_ns()/1000000
     # counts_arr contains a list of (char, freq) pairs
     counts_arr = utils.get_frequencies(text)
     utils.print_frequencies(counts_arr)
 
     ## Generating Huffman code
 
-    gen_time = time.time_ns()/1000000
+    
     # Using a copy of counts_arr to generate huffman tree and code
     huff_tree = huffman.make_tree(counts_arr.copy())
     huffman_code = huffman.generate(huff_tree)
     gen_time = time.time_ns()/1000000 - gen_time
-
-    print(f'Time to Generate Huffman Code: {gen_time}ms')
 
 
     # Saving huffman code to a json file for further use
     json.dump(huffman_code, open(f"Code{file_number}.json", 'w'))
     huffman.display(huffman_code)
 
+    # Loop 
     symbols = 0
     for (char, count) in counts_arr:
         symbols += count*len(huffman_code[char])
 
-    print(f"Average length of Huffman encoded codeword: {symbols/len(text)}")
+    print(f"\nAverage length of Huffman encoded codeword: {symbols/len(text)}")
+    print(f'Time to Generate Huffman Code: {gen_time}ms')
     print("\n=================\n")
 
     ## Encoding
@@ -87,6 +88,12 @@ if(operation[0].lower() == 'd' or operation[0].lower() == 'b'):
 
     open(f"./Results/Decoded_output{file_number}.txt", 'w').write(decoded_output)
     print(f"\nThe Decoded string is in Results/Decoded_output{file_number}.txt\n")
+
+    # Checking if original text and decoded text matches
+    if(decoded_output == text):
+        print("Decoded text matches original text\n")
+    else:
+        print("Decoded output and text don't match\n")
 
 try:
     len(huffman_code)

@@ -44,13 +44,14 @@ for p in p_array:
                 # Choosing any random codeword from the set of codewords with the minimum Hamming Distance
                 c_estimate = choice(utils.MDD(ybar, code))
 
+                # Checking if the decoder made an error
                 if (c_estimate != cbar):
                     E += 1
 
             if (E < minE):
                 minE = E
 
-            print(f"The probability of error in decoding for trial {l} is equal to {E/N}")
+            print(f"The probability of error in decoding for trial {l+1} is equal to {E/N}")
 
         print(f"The minimum probability of error in decoding (after five trials) for this (n, k, p) tuple is {minE/N}.")
         print()
@@ -70,13 +71,39 @@ plt.legend()
 plt.show()
 
 
-
-# At k = 11, we are picking 2^11 codewords. ie, for n = 10, rate of code > 1 (since |C| = 2^nR, k = nR)
-# so we get a higher than usual probability of error for k = 11 n = 10. (since rate is more than channel capacity)
 # Channel capacity = 1-H2(p)
-# 1-H2(0.015) = 0.8876
-# 1-H2(0.1) = 0.5310
-# 1-H2(0.45) = 0.0072
+# Following are the values of Channel capacity C for different values of p
+#  
+# 1) p = 0.015
+#    C = 1-H2(0.015) = 0.8876
+# 2) p - 0.1
+#    C = 1-H2(0.1) = 0.5310
+# 3) p = 0.45
+#    C = 1-H2(0.45) = 0.0072
+#
+
+# Rate of code is defined as log|C|/n
+# Where |C| is the number of codewords in code = 2^k
+# and n is the length of each codeword
+#
+# So Rate, R = k/n
+
+# 1) k = 10, n = (10,26)
+# R ranges from 1 to 0.38
+# In theory, Rate must be less than channel capacity to get a low probability of error
+# This probability of error decreases exponentially as n increases as proved in class.
+# This result is visible in the plots as well.
+# For higher values of probability the channel capacity is much lesser and hence we need
+# a longer code to have lesser error probability.
+
+
+# 2) k = 11, n = (10,26)
+# R ranges from 1.1 to 0.423
+# The values of R is much higher in this case so we observe a higher error probability
+# This error probability still reduces exponentially with n
+#
+# Also when a code is picked with 2^11 codewords of length < 11 will definitely 
+# have duplicate codewords which add to the error probability
 
 ## Points for presentation
 #
