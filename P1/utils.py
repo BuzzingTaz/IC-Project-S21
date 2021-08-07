@@ -1,3 +1,4 @@
+# Retuns a list with (char, count) pairs for non zero count 
 def get_frequencies(text):
     freq_arr = [0]*256
     for i in text:
@@ -12,7 +13,7 @@ def get_frequencies(text):
     
     return counts_arr
             
-
+# Printing frequencies
 def print_frequencies(counts_arr):
     print("\nCharacters\t\t--> Frequencies")
     for char,count in counts_arr:

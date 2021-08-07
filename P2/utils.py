@@ -16,14 +16,14 @@ def HammingDistance(c1, c2):
 
 
 # Function to find the Minimum Hamming Distance between a string and the rest of the strings in the code
-def MDD(ybar,code):
+def MDD(ybar, code):
 
     minHammingDistance = 99999
-    minset = [] # Set of all codewords in the code that have the minimum Hamming Distance compared to ybar
+    minset = []  # Set of all codewords in the code that have the minimum Hamming Distance compared to ybar
 
     for codeword in code:
 
-        distance = HammingDistance(ybar,codeword)
+        distance = HammingDistance(ybar, codeword)
 
         if distance < minHammingDistance:
             minHammingDistance = distance
@@ -37,19 +37,17 @@ def MDD(ybar,code):
 
     return minset
 
+
 # Function to generate a code of size 2^k from the vector space {0,1}^k
-def codegen(n,k):
+def codegen(n, k):
 
     code = []
 
     for i in range(2**k):
-
         codeword = ''
 
         for j in range(n):
-
-            codeword +=  str(randint(0,1))
-
+            codeword += str(randint(0, 1))
         code.append(codeword)
 
     return code
@@ -63,13 +61,14 @@ def flip(bit):
     else:
         return 0
 
+
+# Function to simulate BSC
 def BSC(p, cbar):
     ybar = ''
     for i in cbar:
-        if uniform(0,1) <= p:
-            ybar += str(flip(int(i))) # Flipping a bit with probability p
-
+        if uniform(0, 1) <= p:
+            ybar += str(flip(int(i)))  # Flipping a bit with probability p
         else:
-            ybar += str(i) # Not flipping a bit with probability 1-p
+            ybar += str(i)  # Not flipping a bit with probability 1-p
 
     return ybar
