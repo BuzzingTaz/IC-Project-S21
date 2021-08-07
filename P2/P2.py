@@ -88,8 +88,8 @@ plt.show()
 #
 # So Rate, R = k/n
 
-# 1) k = 10, n = (10,26)
-# R ranges from 1 to 0.38
+# 1) k = 10, n = (15,26)
+# R ranges from 0.667 to 0.38
 # In theory, Rate must be less than channel capacity to get a low probability of error
 # This probability of error decreases exponentially as n increases as proved in class.
 # This result is visible in the plots as well.
@@ -97,8 +97,8 @@ plt.show()
 # a longer code to have lesser error probability.
 
 
-# 2) k = 11, n = (10,26)
-# R ranges from 1.1 to 0.423
+# 2) k = 11, n = (15,26)
+# R ranges from 0.733 to 0.423
 # The values of R is much higher in this case so we observe a higher error probability
 # This error probability still reduces exponentially with n
 #

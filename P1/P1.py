@@ -40,7 +40,7 @@ if (operation[0].lower() == 'e'or operation[0].lower() == 'b'):
     json.dump(huffman_code, open(f"Code{file_number}.json", 'w'))
     huffman.display(huffman_code)
 
-    # Loop 
+    # Loop to calculate average length of huffman encoded string
     symbols = 0
     for (char, count) in counts_arr:
         symbols += count*len(huffman_code[char])
