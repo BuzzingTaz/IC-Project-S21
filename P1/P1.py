@@ -8,7 +8,6 @@ import utils
 import huffman
 
 
-
 ## Asking user input
 
 file_number = input("Enter file number to be encoded: ")
@@ -20,12 +19,12 @@ operation = input("Enter operation E/D/B (Encode/Decode/Both): ")
 file_location = "./Inputs/File_" + file_number + ".txt"
 text = open(file_location,"r").read()
 
-# counts_arr contains a list of (char, freq) pairs
-counts_arr = utils.get_frequencies(text)
-utils.print_frequencies(counts_arr)
-
 
 if (operation[0].lower() == 'e'or operation[0].lower() == 'b'):
+
+    # counts_arr contains a list of (char, freq) pairs
+    counts_arr = utils.get_frequencies(text)
+    utils.print_frequencies(counts_arr)
 
     ## Generating Huffman code
 

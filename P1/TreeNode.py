@@ -1,3 +1,4 @@
+## Class for node of binary tree (can be improved )
 class TreeNode:
 
     def __init__(self, left=None, right=None):

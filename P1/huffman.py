@@ -14,6 +14,7 @@ def generate(Node, enc_string = ''):
     return enc_dict
 
 
+# Uses the huffman_code dictionary to lookup codeword and encodes input text
 def encode(text, huffman_code):
 
     enc_string = ''
@@ -23,6 +24,7 @@ def encode(text, huffman_code):
     return enc_string
 
 
+# Reverses the huffman_code dictionary to use the codeword to find decoded text
 def decode(text, huffman_code):
 
     decode_dict = {}
@@ -40,7 +42,9 @@ def decode(text, huffman_code):
     return output_string
 
 
-# Takes in array of (char, count) pairs and returns huffman tree
+# Takes in array of (char, count) pairs and 
+# iteratively creates a huffman tree
+# The root node is returned
 def make_tree(counts_arr):
 
     while len(counts_arr)>1:
@@ -55,7 +59,11 @@ def make_tree(counts_arr):
     
     return counts_arr[0][0]
 
+
+# Displays the huffman code dictionary
 def display(huffman_code):
     print("\nList of Huffman Codes:")
     for (char, code) in huffman_code.items():
         print(f"\'{char}\' (ASCII = {ord(char)})\t--> {code}")
+        
+        
